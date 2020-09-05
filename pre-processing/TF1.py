@@ -1,7 +1,9 @@
+'''
+Create frequency dict vocabulary and apaply TF1 to remove words that only occur once
+'''
+
 import json
 from collections import defaultdict
-
-'''Create frequency dict vocabulary and apaply TF1 to remove words that only occur once'''
 
 
 wordFrequency = defaultdict(int)

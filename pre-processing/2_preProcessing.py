@@ -1,8 +1,15 @@
 """ 
-This file  prepares the data to be processed
- - Run in terminal: python generate-data-json.py
- - The data must be already cleaned/sanitzed before passing it to the pre-processing
- - Restrictions: each line of the input must have the following format sentiment<SPACE>tweet
+This file  prepares the data for the classifiers.
+STEPS: 
+  1) Text pre-processing
+  2) POS Tagger & tokenizer (see posTagger.py)
+  3) Test post-processing
+
+RESTRICTIONS:
+  - input file: each line must have the following format sentiment<SPACE>text
+  - output file: json file with all the needed information of the tweet
+
+ - Restrictions: each line of the input file to be processed must have the following format sentiment<SPACE>tweet
 """
 
 import json
@@ -25,7 +32,7 @@ from TF1 import TF1
 result = dict()
 result['data'] = []
 
-inputFile = open("./bbcProms.txt")
+inputFile = open("./train.txt")
 '''
   Change output dataset to apply different processings to the data
   Options:
@@ -37,7 +44,7 @@ inputFile = open("./bbcProms.txt")
     - test-binary
     - training-augmented
 '''
-dataset = "test"
+dataset = "training"
 output_file = "bbcProms.json"
 
 EMOTICONS = {

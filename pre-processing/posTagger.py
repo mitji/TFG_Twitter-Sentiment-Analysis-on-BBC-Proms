@@ -1,10 +1,14 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-"""Simple Python wrapper for runTagger.sh script for CMU's Tweet Tokeniser and Part of Speech tagger: http://www.ark.cs.cmu.edu/TweetNLP/
+"""
+Python wrapper for runTagger.sh script for CMU's Tweet Tokeniser and Part of Speech tagger: http://www.ark.cs.cmu.edu/TweetNLP/
 
+Script adapted from https://github.com/ianozsvald/ark-tweet-nlp-python to adapt it into my pre-processing pipeline from '2_preProcessing.py", 
+and make it callable from other files
 Usage:
-results=runtagger_parse(['example tweet 1', 'example tweet 2'])
-results will contain a list of lists (one per tweet) of triples, each triple represents (term, type, confidence)
+tokens = runtagger_parse(list_of_tweets)
+where list_of_tweets is a list of strings
+results will contain a list dicts/objects (one per tweet) with two propertioes, one for the token itself and one for the POS tag
 """
 import subprocess
 import shlex

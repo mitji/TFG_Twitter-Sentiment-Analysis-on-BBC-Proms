@@ -1,3 +1,10 @@
+'''
+This script splits training file into train and validation tests. The proportion of validation
+can be modified in line 39 with the 'test_size' value. 
+
+For more info on train_test_split method check https://scikit-learn.org/stable/modules/generated/sklearn.model_selection.train_test_split.html
+'''
+
 import json
 from sklearn.model_selection import train_test_split
 
@@ -49,30 +56,3 @@ with open(valid_file, 'w') as valid:
 
 print(len(train_data))
 print(len(valid_data))
-
-# with open(input, 'r') as json_file:
-#     data = json.load(json_file)
-
-# dataset = data['data']
-
-# # Apply TF1 on training data
-# train_data_tf1 = TF1(train_data)
-# with open('train.jsonl', 'w') as trainFile:
-#     for entry in train_data:
-#         json.dump(entry, trainFile)
-#         trainFile.write('\n')
-
-# with open('valid.jsonl', 'w') as validData:
-#     for entry in valid_data:
-#         json.dump(entry, validData)
-#         validData.write('\n')
-
-# with open('test.jsonl', 'w') as testFile:
-#     for entry in dataset:
-#         json.dump(entry, testFile)
-#         testFile.write('\n')
-
-# with open('bbc-proms.jsonl', 'w') as testBBCProms:
-#     for entry in dataset:
-#         json.dump(entry, testBBCProms)
-#         testBBCProms.write('\n')
