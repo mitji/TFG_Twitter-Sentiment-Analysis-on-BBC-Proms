@@ -8,8 +8,6 @@ STEPS:
 RESTRICTIONS:
   - input file: each line must have the following format sentiment<SPACE>text
   - output file: json file with all the needed information of the tweet
-
- - Restrictions: each line of the input file to be processed must have the following format sentiment<SPACE>tweet
 """
 
 import json
