@@ -1,6 +1,6 @@
 '''
 This script takes all the different training files available at http://alt.qcri.org/semeval2017/task4/index.php?id=data-and-tools 
-and joins them into one single training file to train the classifier. The trianing file is can be splited into train and test sets
+and joins them into one single training file to train the classifier. The training file is splited into train and validation sets
 with the script from this directory '1_trainValidSplit.py'
 '''
 
