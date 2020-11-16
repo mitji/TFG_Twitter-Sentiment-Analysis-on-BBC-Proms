@@ -1,6 +1,6 @@
 '''
   This script is made to convert json files from pre-processing to jsonl files,
-  which is the format that the data passed to torchtext needs to have
+  which is the format that the data passed to torchtext and Kibana needs to have
 '''
 
 import sys
